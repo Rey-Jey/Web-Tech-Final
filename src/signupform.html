@@ -1,1 +1,108 @@
 <!DOCTYPE html>
+<html>
+<head>
+  <style>
+    @import url(css/stylesheet.css);
+  </style>
+</head>
+<body>
+  <section>
+    <h2>Performance Prices</h2>
+    <table>
+      <caption>Performance Prices</caption>
+      <colgroup></colgroup>
+      <colgroup span="3"></colgroup>
+     <thead>
+     <tr>
+       <th rowspan="2">&nbsp;</th>
+       <th colspan="2">Cost Per Performer</th>
+       <th rowspan="2">Overtime Price per hour</th>
+     </tr>
+     <tr>
+       <th>Initial Cost</th>
+       <th>Price per hour</th>
+     </tr>
+     </thead>
+     <tbody>
+     <tr>
+       <th scope="row">1 - 2</th>
+       <td>$50</td>
+       <td>$20</td>
+       <td>$40</td>
+     </tr>
+     <tr>
+       <th scope="row">3 - 5</th>
+       <td>$75</td>
+       <td>$30</td>
+       <td>$50</td>
+     </tr>
+     <tr>
+       <th scope="row">6 - 8</th>
+       <td>$100</td>
+       <td>$80</td>
+       <td>$70</td>
+     </tr>
+     </tbody>
+   </table>
+  </section>
+  <section>
+    <h2>Performance Sign Up</h2>
+    <form>
+      <fieldset> <!-- Overarching fieldset to box in the sign up form -->
+        <fieldset>
+          <legend>Your Information</legend>
+          <ul class ="forms">
+            <li><label for="form-name">Name:</label> <input type="text" name="customername" id="form-name"></li>
+            
+            <li><label for="form-performancename">Performance Name:</label> <input type="text" name="perfomancename" id="form-performancename"></li>
+    
+            <li><label for="form-noperformers">Number of Performers:</label><select name="performers" size="1" id="form-noperformers"> <!--drop down menu-->
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+            </select>
+            <small>Maximum number of performers is 8!</small></li>
+            <li><label for="form-timedate">Time and Date: </label><input type="datetime-local" name="appointment" min="13:00" max="22:00" required id="form-timedate"></li>
+            <li><label for="form-desc">
+              Tell us About your Performance:</label><br>
+              <textarea
+              name="instructions"
+              rows="4"
+              cols="60"
+              maxlength="400"
+              placeholder="Up to 400 characters"
+              id="form-desc">
+              </textarea>
+            </li>
+          </ul>
+        </fieldset>
+    <fieldset>
+      <legend>Additional Questions</legend>
+        <h3>Will you require assistance from our employees to move any equipment/help set up?</h3>
+        <ul class = "forms">
+          <li><label><input type ="radio" name="assistance" value="white"> Yes</label></li>
+          <li><label><input type ="radio" name="assistance" value="white"> No</label></li> <!-- the names are the same so that the user can't selected two at a time -->
+          
+          <h3>If you would like to sell any merchandise, please specify what kind, otherwise, select "N/A"</h3>
+          
+          <li><label><input type ="checkbox" name="clothes" value="white">clothing (such as shirts, sweaters, hats, etc.)</label></li>
+          
+          <li><label><input type ="checkbox" name="music" value="white">CDs, records, albums, or any other form of media </label></li>
+          
+          <li><label><input type ="checkbox" name="merchandise" value="white">Posters, keychains, or similar memorabilia</lable></li>
+            
+            <li><label><input type ="checkbox" name="nothing" value="white">N/A</label></li>
+          </ul>
+        </fieldset>
+        
+        <p><input type="submit" value="Submit"> <input type="reset"></p>
+      </fieldset>
+    </form>
+  </section>
+  </body>
+  </html>
