@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "utf-8"> 
+  <title>Events</title>
+  <style>
+
+    @import url(homestyle.css);
+    td, th {border: 1px solid black;}
+    table {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+   body {
+    background-color: #faf2e4;
+    margin: 0 10%;
+    font-family: serif;
+   }
+   h1 {
+    color: #d1633c;
+    text-align: center;
+    font-family: serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    border-bottom: 1px solid #57b1dc;
+    /*margin-top: 30px;*/
+   }
+   h2 {
+    color: #d1633c;
+    font-size: 1.2em;
+    /*margin-left: 100px; Commenting out to show that I did the exercise, but I absolutely hate how it looks*/
+   }
+
+   h3 {
+    font-size: 1em;
+    }
+   
+   p {
+    font-size: large;
+    /*font-family: sans-serif; */
+    /*margin-left: 100px; this too*/
+   }
+
+   img {
+    float: right;
+    margin: 0 12px;
+   }
+
+   .forms{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+   }
+    
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Events.html">Events</a></li>
+      <li><a href="flexboxes.html">Staff</a></li>
+      <li><a>Tab 3</a></li>
+    </ul>
+  </nav>
+  <h1>Events</h1>
+  <blockquote>
+    "The Blind Spot is meant to be a place where people can come to enjoy a nice meal as well as experience some of the greatest performances this city has to offer."
+  </blockquote> <b>- Clyde Iverson, Owner</b> <hr>
+ 
+<section>
+  <h2>About the Events Venue</h2>
+  <p>
+    A section of our restaurant is designated for performances! This part of the restaurant is separate from the main dining hall, so don't worry about any inconveniences during your meal! 
+    <br><br>
+    If you wish to attend a performance while enjoying your meal, please specify <b><q>Event seating</q></b> when making your reservation.
+  </p>
+
+  <picture>
+    <source media= "(min-width: 480px)"
+    srcset ="images/performers_900.png 900w,
+    images/performers_500.jpg 500w"
+    sizes = "80vw">
+    <img src ="images/performers_400.png" alt ="The Retirees performing at our venue.">
+  </picture>
+
+  <h2>Upcoming Performers</h2>
+  <p>
+    <ul>
+      <li><i>Stellarium, Sounds from the Cosmos</i> by Jacob Holmes <br>
+      Monday, February 21st, <time>5:00 pm</time> </li>
+
+      <video src="stellarium.mp4" width="512" height="288" autoplay loop controls> Sorry, your browser doesn't support html5 video. </video> <!-- added loop so the video doesn't stop playing !-->
+      
+      <br><br>
+
+      <li><i>The Splendiforous Santoni</i> by Sylvester Santoni <br>
+      Wednesday, March 8th, <time>7:00 pm</time></li>
+
+      <br>
+
+      <li><s><i>Mary and the Martinis</i></s> <br>
+      <s>Friday, March 17th, <time>8:00pm</time></s> <!-- strikethrough --><b><span style="color:red">Cancelled by Performer</span></b></li>
+
+      <br>
+
+      <li><i>Empty Thoughts</i> by Penelope Dionne <br>
+      Saturday, March 25th, <time>10:00 pm</time> </li>
+    </ul>
+  </p>
+</section>
+
+<section>
+  <h2>Schedule a Performance</h2>
+  <p> 
+  The Blind Spot is open to performers! <b>Please contact us one month in advance</b> in order to fill a time slot during the day.</p>
+
+  <p><b>Please let us know about your performance prior to arriving at the venue.</b> Due to previous incidents, the following are currently <em>not</em> accepted at this time:
+    <ul>
+      <li>Stand-up Comedy</li>
+      <li>Bands with more than 8 members</li>
+      <li>Interpretive dance</li>
+      <li>Sit-down Comedy</li>
+      <li>Hypnosis</li>
+      <li>Opera</li>
+      <li>Pyrotechnics</li>
+      <li>Lie-down Comedy</li>
+      <li>Live Live-Streaming</li>
+    </ul>
+
+    Want to perform at our restaurant? Call <a href="tel:18005559119">1 800-555-9119</a> 
+  </p>
+</section>
+
+<section>
+  <h2>Performance Prices</h2>
+  <table>
+    <caption>Performance Prices</caption>
+    <colgroup></colgroup>
+    <colgroup span="3"></colgroup>
+   <thead>
+   <tr>
+     <th rowspan="2">&nbsp;</th>
+     <th colspan="2">Cost Per Performer</th>
+     <th rowspan="2">Overtime Price per hour</th>
+   </tr>
+   <tr>
+     <th>Initial Cost</th>
+     <th>Price per hour</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+     <th scope="row">1 - 2</th>
+     <td>$50</td>
+     <td>$20</td>
+     <td>$40</td>
+   </tr>
+   <tr>
+     <th scope="row">3 - 5</th>
+     <td>$75</td>
+     <td>$30</td>
+     <td>$50</td>
+   </tr>
+   <tr>
+     <th scope="row">6 - 8</th>
+     <td>$100</td>
+     <td>$80</td>
+     <td>$70</td>
+   </tr>
+   </tbody>
+ </table>
+</section>
+
+<section>
+  <h2>Performance Sign Up</h2>
+
+  <form>
+<fieldset> <!-- Overarching fieldset to box in the sign up form -->
+    <fieldset>
+      <legend>Your Information</legend>
+      <ul class ="forms">
+        <li><label for="form-name">Name:</label> <input type="text" name="customername" id="form-name"></li>
+
+        <li><label for="form-performancename">Performance Name:</label> <input type="text" name="perfomancename" id="form-performancename"></li>
+
+        <li><label for="form-noperformers">Number of Performers:</label><select name="performers" size="1" id="form-noperformers"> <!--drop down menu-->
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+        </select>
+        <small>Maximum number of performers is 8!</small></li>
+        <li><label for="form-timedate">Time and Date: </label><input type="datetime-local" name="appointment" min="13:00" max="22:00" required id="form-timedate"></li>
+        <li><label for="form-desc">
+          Tell us About your Performance:</label><br>
+          <textarea
+          name="instructions"
+          rows="4"
+          cols="60"
+          maxlength="400"
+          placeholder="Up to 400 characters"
+          id="form-desc">
+          </textarea>
+        </li>
+      </ul>
+    </fieldset>
+<fieldset>
+  <legend>Additional Questions</legend>
+    <h3>Will you require assistance from our employees to move any equipment/help set up?</h3>
+    <ul class = "forms">
+      <li><label><input type ="radio" name="assistance" value="white"> Yes</label></li>
+      <li><label><input type ="radio" name="assistance" value="white"> No</label></li> <!-- the names are the same so that the user can't selected two at a time -->
+
+      <h3>If you would like to sell any merchandise, please specify what kind, otherwise, select "N/A"</h3>
+
+      <li><label><input type ="checkbox" name="clothes" value="white">clothing (such as shirts, sweaters, hats, etc.)</label></li>
+
+      <li><label><input type ="checkbox" name="music" value="white">CDs, records, albums, or any other form of media </label></li>
+
+      <li><label><input type ="checkbox" name="merchandise" value="white">Posters, keychains, or similar memorabilia</lable></li>
+
+      <li><label><input type ="checkbox" name="nothing" value="white">N/A</label></li>
+    </ul>
+</fieldset>
+
+    <p><input type="submit" value="Submit"> <input type="reset"></p>
+</fieldset>
+  </form>
+</section>
+<br><br>
+</body>
+</html>
