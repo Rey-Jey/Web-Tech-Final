@@ -1,0 +1,153 @@
+@mixin for-size($size) {
+  @if $size == phone-only {
+    @media (max-width: 599px) {
+      @content;
+    }
+  } @else if $size == tablet-portrait-up {
+    @media (min-width: 600px) {
+      @content;
+    }
+  } @else if $size == tablet-landscape-up {
+    @media (min-width: 900px) {
+      @content;
+    }
+  } @else if $size == desktop-up {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $size == big-desktop-up {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 3em;
+  text-align: center;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+h2 {
+  font-size: 1.2em;
+  color: white;
+}
+
+h3 {
+  border-top: 1px solid;
+  border-left: 3px solid;
+  padding-left: 1em;
+  font-size: 1em;
+  margin-top: 2.5em;
+}
+
+body {
+  background-color: black;
+}
+
+.initpage {
+  text-align: center;
+  color: white;
+}
+
+.initlink {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  padding-bottom: 0.2em;
+}
+
+a:link {
+  color: lightgrey;
+}
+a:visited {
+  color: lightgrey;
+}
+a:hover {
+  color: white;
+}
+a:active {
+  color: white;
+}
+
+.activepage {
+  background-color: blue;
+  color: pink;
+}
+
+@media screen and (min-width: 400px) {
+  nav {
+    background-color: #5a5a5a;
+    width: 100%;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+
+      @include for-size(phone-only) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    ul li a {
+      display: block;
+      //border: 1px solid;
+      padding: 0.5em 1em;
+      //margin: 0.5em;
+    }
+  }
+}
+
+.bannericon {
+  float: left;
+}
+
+.bannertext {
+  text-align: left;
+  font-size: 1.25em;
+  color: white;
+}
+
+#flexbox {
+  border: 3px solid grey;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 5px;
+}
+
+.staff_name {
+  color: white;
+  text-align: center;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.photo {
+  margin: 0 auto;
+  padding: 0.5rem 0.5rem;
+  img:hover {
+    box-shadow: 0 0 2px 1px;
+  }
+}
+
+.filereport {
+  float: left;
+  padding: 50px, 50px, 50px, 50px;
+}
