@@ -9,6 +9,30 @@ footer {
   padding: 1em;
 }
 
+@mixin for-size($size) {
+  @if $size == phone-only {
+    @media (max-width: 599px) {
+      @content;
+    }
+  } @else if $size == tablet-portrait-up {
+    @media (min-width: 600px) {
+      @content;
+    }
+  } @else if $size == tablet-landscape-up {
+    @media (min-width: 900px) {
+      @content;
+    }
+  } @else if $size == desktop-up {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $size == big-desktop-up {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
+}
+
 @media screen and (min-width: 400px) {
   nav {
     background-color: darkgrey;
@@ -20,6 +44,11 @@ footer {
       list-style-type: none;
       display: flex;
       justify-content: center;
+
+      @include for-size(phone-only) {
+        display: flex;
+        flex-direction: column;
+      }
     }
 
     ul li a {
@@ -46,7 +75,10 @@ a:hover {
 }
 
 .section_class {
-  float: left;
+  float: center;
+  @include for-size(phone-only) {
+    width: 100%;
+  }
 }
 
 img[src*="clova100"] {
@@ -61,7 +93,7 @@ p img {
 }
 
 header {
-  height: 20em;
+  //height: 20em;
   background-position: center top;
   margin-top: 0;
   padding: 3em 1em 2em 1em;
@@ -71,7 +103,7 @@ header {
 
 body {
   background-position: center 100px;
-  margin: 0 10%;
+  //margin: 0 10%;
   font-family: Verdana, sans-serif;
   font-size: 100%;
   background-color: #293542;
@@ -200,10 +232,30 @@ table {
   border: double 4px #eaddc4;
   border-radius: 25px;
   margin: 10px;
+  @include for-size(phone-only) {
+  }
 }
 
 .forms {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+
+.row {
+  content: "";
+  display: table;
+  clear: both;
+  @include for-size(phone-only) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 }
