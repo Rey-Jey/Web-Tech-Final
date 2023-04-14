@@ -50,6 +50,17 @@ h3 {
 
 body {
   background-color: black;
+  margin: 0, 10%;
+}
+
+ul {
+  color: white;
+  list-style-type: none;
+}
+
+p {
+  color: white;
+  text-indent: 5rem;
 }
 
 .initpage {
@@ -149,5 +160,27 @@ a:active {
 
 .filereport {
   float: left;
-  padding: 50px, 50px, 50px, 50px;
+  padding: 1rem;
+}
+
+.reportstamp {
+  float: right;
+  padding: 1rem;
+}
+
+.sendreport {
+  text-align: center;
+}
+
+.crimeheader {
+  flex-direction: column;
+  border-bottom: white;
+  border-style: solid;
+}
+
+.crimestats {
+  @include for-size(phone-only) {
+    display: inline-block;
+    width: 100%;
+  }
 }
