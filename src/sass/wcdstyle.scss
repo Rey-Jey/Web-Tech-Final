@@ -1,10 +1,6 @@
 @mixin for-size($size) {
   @if $size == phone-only {
-    @media (max-width: 599px) {
-      @content;
-    }
-  } @else if $size == tablet-portrait-up {
-    @media (min-width: 600px) {
+    @media (max-width: 640px) {
       @content;
     }
   } @else if $size == tablet-landscape-up {
@@ -15,11 +11,11 @@
     @media (min-width: 1200px) {
       @content;
     }
-  } @else if $size == big-desktop-up {
-    @media (min-width: 1800px) {
-      @content;
-    }
   }
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html {
@@ -28,16 +24,36 @@ html {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+body {
+  color: white;
+  background-color: black;
+  margin: 0, 10%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  @include for-size(desktop-up) {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+footer {
+  color: grey;
+  height: 50px;
+  margin-top: auto;
+}
+
 h1 {
+  color: whitesmoke;
   font-size: 3em;
   text-align: center;
   font-weight: normal;
   text-transform: uppercase;
   margin-top: 30px;
 }
+
 h2 {
-  font-size: 1.2em;
-  color: white;
+  font-size: 1.25em;
 }
 
 h3 {
@@ -48,24 +64,20 @@ h3 {
   margin-top: 2.5em;
 }
 
-body {
-  background-color: black;
-  margin: 0, 10%;
-}
-
 ul {
-  color: white;
   list-style-type: none;
 }
 
 p {
-  color: white;
+  text-align: left;
+}
+
+.filep {
   text-indent: 5rem;
 }
 
 .initpage {
   text-align: center;
-  color: white;
 }
 
 .initlink {
@@ -93,32 +105,28 @@ a:active {
 
 .activepage {
   background-color: blue;
-  color: pink;
+  color: white;
 }
 
-@media screen and (min-width: 400px) {
-  nav {
-    background-color: #5a5a5a;
-    width: 100%;
+nav {
+  background-color: #5a5a5a;
+  width: 100%;
 
-    ul {
-      margin: 0;
-      padding: 0;
-      list-style-type: none;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+
+    @include for-size(phone-only) {
       display: flex;
-
-      @include for-size(phone-only) {
-        display: flex;
-        flex-direction: column;
-      }
+      flex-direction: column;
     }
+  }
 
-    ul li a {
-      display: block;
-      //border: 1px solid;
-      padding: 0.5em 1em;
-      //margin: 0.5em;
-    }
+  ul li a {
+    display: block;
+    padding: 0.5em 1em;
   }
 }
 
@@ -129,7 +137,6 @@ a:active {
 .bannertext {
   text-align: left;
   font-size: 1.25em;
-  color: white;
 }
 
 #flexbox {
@@ -143,7 +150,11 @@ a:active {
   gap: 5px;
 }
 
-.staff_name {
+.criminal {
+  background-color: #1f2022;
+}
+
+.criminal_name {
   color: white;
   text-align: center;
   font-weight: normal;
@@ -182,5 +193,53 @@ a:active {
   @include for-size(phone-only) {
     display: inline-block;
     width: 100%;
+    padding: 0.5rem;
   }
+}
+
+.status {
+  padding: 1rem;
+}
+
+.column {
+  text-align: center;
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  @include for-size(phone-only) {
+    width: 100%;
+  }
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+time,
+em,
+q {
+  color: red;
+}
+
+.crim_quote {
+  text-align: center;
+  font-size: 1.25em;
+}
+
+.forms {
+  padding: 0;
+  margin: 0;
+}
+
+.responsive {
+  float: none;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+}
+
+.catchwc {
+  display: inline-block;
+  width: 100%;
 }

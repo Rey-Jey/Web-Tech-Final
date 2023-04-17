@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Make A Report</title>
+    <link rel="icon" href="/images/blindeye.png" />
     <style>
       @import url(css/wcdstyle.css);
     </style>
@@ -12,6 +14,7 @@
       <ul>
         <li><a href="homepage.html">Home</a></li>
         <li><a href="database.html">Database</a></li>
+        <li><a href="catchawc.html">How to Capture a Wacky Criminal</a></li>
         <li><a class="activepage" href="reports.html">Make a Report</a></li>
       </ul>
     </nav>
@@ -19,6 +22,110 @@
     <h2 class="sendreport">
       Spotted any of these criminals? Please let us know
     </h2>
-    <a href="mailto:reyjakosa@gmail.com">send report</a>
+    <form
+      action="mailto:reyjakosa@gmail.com"
+      method="post"
+      enctype="text/plain"
+    >
+      <fieldset>
+        <!-- Overarching fieldset to box in the sign up form -->
+        <fieldset>
+          <ul class="forms">
+            <li>
+              <label for="form-name">Criminal Name:</label>
+              <input type="text" name="criminal_name" required id="form-name" />
+            </li>
+
+            <li>
+              <label for="form-timedate">Time and Date: </label
+              ><input
+                type="datetime-local"
+                name="date_found"
+                min="00:00"
+                max="24:00"
+                required
+                id="form-timedate"
+              />
+            </li>
+
+            <li>
+              <label for="form-location">Location of Wacky Criminal: </label
+              ><input
+                type="text"
+                name="crminal_loc"
+                required
+                id="form-location"
+              />
+            </li>
+            <li>
+              <label for="form-desc">
+                Tell us about your encounter with the Wacky Criminal</label
+              ><br />
+              <textarea
+                name="instructions"
+                rows="6"
+                cols="60"
+                maxlength="400"
+                placeholder="Up to 400 characters"
+                id="form-desc"
+              >
+              </textarea>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Additional Questions</legend>
+          <h3>Did you capture the Wacky Criminal?</h3>
+          <ul class="forms">
+            <li>
+              <label
+                ><input type="radio" name="capture" value="white" /> Yes</label
+              >
+            </li>
+            <li>
+              <label
+                ><input type="radio" name="capture" value="white" /> No</label
+              >
+            </li>
+          </ul>
+          <!-- the names are the same so that the user can't selected two at a time -->
+
+          <h3>
+            If yes, how did you capture the Wacky Criminal? Otherwise, select
+            "N/A"
+          </h3>
+          <ul class="forms">
+            <li>
+              <label
+                ><input type="radio" name="method" value="white" />Captured with
+                a ROWCC and submitted to a collection station</label
+              >
+            </li>
+
+            <li>
+              <label
+                ><input type="radio" name="method" value="white" />Called a
+                professional and let them handle it</label
+              >
+            </li>
+
+            <li>
+              <label
+                ><input type="radio" name="method" value="white" />N/A</label
+              >
+            </li>
+          </ul>
+        </fieldset>
+
+        <p><input type="submit" value="Submit" /> <input type="reset" /></p>
+      </fieldset>
+    </form>
   </body>
+  <footer>
+    <small>Author: Rey Jakosalem</small> <br />
+    <small
+      >This website is by all means fake, all characters are created by
+      me</small
+    >
+  </footer>
 </html>
