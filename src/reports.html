@@ -43,7 +43,6 @@
                 name="date_found"
                 min="00:00"
                 max="24:00"
-                required
                 id="form-timedate"
               />
             </li>
@@ -52,7 +51,7 @@
               <label for="form-location">Location of Wacky Criminal: </label
               ><input
                 type="text"
-                name="crminal_loc"
+                name="criminal_loc"
                 required
                 id="form-location"
               />
@@ -62,7 +61,7 @@
                 Tell us about your encounter with the Wacky Criminal</label
               ><br />
               <textarea
-                name="instructions"
+                name="Ecounter"
                 rows="6"
                 cols="60"
                 maxlength="400"
@@ -79,13 +78,11 @@
           <ul class="forms">
             <li>
               <label
-                ><input type="radio" name="capture" value="white" /> Yes</label
+                ><input type="radio" name="capture" value="Yes" /> Yes</label
               >
             </li>
             <li>
-              <label
-                ><input type="radio" name="capture" value="white" /> No</label
-              >
+              <label><input type="radio" name="capture" value="No" /> No</label>
             </li>
           </ul>
           <!-- the names are the same so that the user can't selected two at a time -->
@@ -97,22 +94,20 @@
           <ul class="forms">
             <li>
               <label
-                ><input type="radio" name="method" value="white" />Captured with
+                ><input type="radio" name="method" value="ROWCC" />Captured with
                 a ROWCC and submitted to a collection station</label
               >
             </li>
 
             <li>
               <label
-                ><input type="radio" name="method" value="white" />Called a
-                professional and let them handle it</label
+                ><input type="radio" name="method" value="Professional" />Called
+                a professional and let them handle it</label
               >
             </li>
 
             <li>
-              <label
-                ><input type="radio" name="method" value="white" />N/A</label
-              >
+              <label><input type="radio" name="method" value="N/A" />N/A</label>
             </li>
           </ul>
         </fieldset>
