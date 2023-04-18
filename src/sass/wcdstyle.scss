@@ -132,6 +132,7 @@ nav {
 
 .bannericon {
   float: left;
+  align-items: center;
 }
 
 .bannertext {
@@ -179,7 +180,7 @@ nav {
   padding: 1rem;
 }
 
-.sendreport {
+.centertext {
   text-align: center;
 }
 
@@ -242,4 +243,15 @@ q {
 .catchwc {
   display: inline-block;
   width: 100%;
+}
+
+.databaseh {
+  color: red;
+}
+
+iframe {
+  float: none;
+  width: 100%;
+  height: 315px;
+  max-width: 560px;
 }

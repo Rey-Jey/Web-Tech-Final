@@ -19,31 +19,73 @@
         <li><a href="reports.html">Make a Report</a></li>
       </ul>
     </nav>
+    <h1>Database</h1>
+    <p>
+      The WCD stores information on all reported Wacky Criminals within a
+      centralized Database. Before navigating the Database, there is some
+      information needed to understand its contents.
+    </p>
 
-    <h1 style="color: red">Select a file to review their contents</h1>
+    <table>
+      <caption>
+        Wacky Criminal Statuses:
+      </caption>
+      <colgroup></colgroup>
+      <colgroup span="2"></colgroup>
+      <thead>
+        <tr>
+          <th rowspan="2">&nbsp;</th>
+          <th colspan="2">Cost Per Performer</th>
+          <th rowspan="2">Overtime Price per hour</th>
+        </tr>
+        <tr>
+          <th>Initial Cost</th>
+          <th>Price per hour</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1 - 2</th>
+          <td>$50</td>
+          <td>$20</td>
+          <td>$40</td>
+        </tr>
+        <tr>
+          <th scope="row">3 - 5</th>
+          <td>$75</td>
+          <td>$30</td>
+          <td>$50</td>
+        </tr>
+        <tr>
+          <th scope="row">6 - 8</th>
+          <td>$100</td>
+          <td>$80</td>
+          <td>$70</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h1 class="databaseh">Select a file to review their contents</h1>
     <div id="flexbox">
       <section class="criminal">
         <a class="dataselect" href="file_red.html">
-          <img src="images/redman200.png" alt="man" class="photo" />
+          <img src="images/redman200.png" alt="Redmann" class="photo" />
           <h2 class="criminal_name">John Redmann</h2>
         </a>
       </section>
 
       <section class="criminal">
         <a class="dataselect" href="file_blue.html">
-          <img src="images/blueman200.png" alt="man" class="photo" />
+          <img src="images/blueman200.png" alt="Bleu" class="photo" />
           <h2 class="criminal_name">Jacqueline Bleu</h2>
         </a>
       </section>
 
       <section class="criminal">
-        <img src="images/whiteman200.png" alt="man" class="photo" />
-        <h2 class="criminal_name">Walter White</h2>
-      </section>
-
-      <section class="criminal">
-        <img src="images/yellowman200.png" alt="man" class="photo" />
-        <h2 class="criminal_name">Kelly Yellow</h2>
+        <a class="dataselect" href="file_white.html">
+          <img src="images/whiteman200.png" alt="White" class="photo" />
+          <h2 class="criminal_name">Walter White</h2>
+        </a>
       </section>
     </div>
   </body>
